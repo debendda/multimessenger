@@ -1,0 +1,9 @@
+pyopenssl
+Flask
+flask-sqlalchemy
+flask-restful
+flask-jwt-extended
+flask-cors
+python-telegram
+fbchat-asyncio
+nest-asyncio

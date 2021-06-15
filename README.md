@@ -2,7 +2,7 @@
 
 # Introduction
 
-This is the documentation for the project multi-messenger for the lecture system administartion. This project provides an api written in pyhton for the messengers Telegram and Facebook messenger.
+This is the documentation for the project multi-messenger for the lecture system administartion. This project provides an api written in python for the Telegram and Facebook messenger.
 
 **This is just an example and should not be hosted online.**
 **We are not liable for any damage incurred.**
@@ -24,4 +24,18 @@ By default the Database from Telegram is saved under */tmp/phone_number/*, which
 Since this Project uses HTTPS you'll need a Certificate. You can create your own unsigned Certificate and put it in the folder *multimessenger/key/*.
 
 # Usage
-To start the server, navigate to *multimessenger/src* 
+To start the server, navigate to *multimessenger/*:
+1. source the virtual enviroment ```source multimessenger_env/bin/activate```
+2. set execution rights for app.py ```chmod u+x /src/app.py```
+3. start the Server ```python /multimessenger/app.py```
+4. Not the Server should be running on *127.0.0.1:5000*
+
+In order to use the Telegram Messenger you will need an API-Key and API-Hash. Both of them can be easily acquired from telegram https://core.telegram.org/api/obtaining_api_id
+
+Now all of the Endpoints should be up and running. 
+In order to use them you'll first have to Post to **/login** and supply the user credentials you created while the installation process.
+If the credentials were right, you will recieve an access and refresh token. 
+- Access Token: Let's you access all the Endpoints that need authentication
+- Refresh Token: You can acquire a new Token if your access token expired
+
+For an detailed explanation for all the available Endpoints you might take a look in endpoints.md

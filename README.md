@@ -38,4 +38,18 @@ If the credentials were right, you will recieve an access and refresh token.
 - Access Token: Let's you access all the Endpoints that need authentication
 - Refresh Token: You can acquire a new Token if your access token expired
 
+Overview Endpoints:
+- **/login**: login with your credentials to recieve access and refresh token
+- **/token/refresh**: refresh your access token with the refresh token
+- **/logout/access**: revoke your access token, in case you stop using the API
+- **/logout/refresh**: revoke the refresh token
+- **/messenger/login**: login to the messenger defined in the Post Request
+- **/messenger/logout**: logout from the messenger specified in the Post Request
+- **/messenger/chats**: recieve single chats or all chats
+- **/messenger/profiles**: recieve single profiles or all profiles
+- **/stream**: recieve notifications if new messsage, message was send, message was read, user is active, user is typing
+
+**If you login to telegram messenger and this your first login, it will ask you for an code you should recieve from the telegram service on you phone.
+Repeat the login Request with the code supplied**
+
 For an detailed explanation for all the available Endpoints you might take a look in endpoints.md
